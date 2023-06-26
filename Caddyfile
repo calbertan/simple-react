@@ -1,0 +1,18 @@
+# Where caddy should listen
+:2015 {
+	# The site root
+	root * /srv/www
+	# Turn on the Web/file server
+	route {
+		# reverse_proxy /api* 10.96.234.185:3001
+		# try_files {path} {path}/ /index.html
+		file_server
+	}
+}
+
+# log {
+#        # errors stdout
+#         output stdout
+#         format single_field common_log
+#         level info
+# }
